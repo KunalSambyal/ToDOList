@@ -1,0 +1,127 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    height: 95%;
+    min-height: 100dvh;
+    background-image: linear-gradient(
+        135deg,
+        hsl(284, 65%, 49%),
+        hsl(192, 45%, 41%),
+        hsl(256, 65%, 51%)
+    );
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    max-width: 480px;
+    width: 100%;
+    border-radius: 4px;
+    background-color: hsl(0, 0%, 100%);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    box-shadow: 1px 1px 10px hsla(0, 0%, 0%, 0.5);
+}
+
+.add-task {
+    background: hsl(0, 0%, 90%);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 24px;
+    padding-left: 12px;
+}
+
+.input-field {
+    font-size: 16px;
+    height: 48px;
+    padding: 12px 8px;
+    background: none;
+    border: none;
+    outline: none;
+    border-radius: 24px;
+    width: 100%;
+}
+
+.add-button {
+    font-size: 14px;
+    color: hsl(0, 0%, 95%);
+    font-weight: 600;
+    border: none;
+    border-radius: 24px;
+    background-color: hsl(22, 100%, 55%);
+    padding: 8px 12px;
+    cursor: pointer;
+    height: 48px;
+    width: 80px;
+    transition: ease-in-out 0.2s;
+}
+.add-button:hover {
+    background-color: hsl(22, 100%, 65%);
+    color: hsl(0, 0%, 90%);
+}
+.add-button:active {
+    transform: scale(1.03);
+}
+
+
+.task-lists ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    font-size: 16px;
+}
+
+.task-lists ul li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    width: 100%;
+    position: relative;
+    padding: 0 12px;
+    border-radius: 12px;
+    height: 32px;
+}
+.task-lists ul li:hover {
+    background-color: hsl(0, 0%, 95%);
+}
+
+.delete-task {
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 24px;
+    width: 24px;
+    background: none;
+    border: none;
+    right: 0;
+    position: absolute;
+}
+.delete-task:hover {
+    background-color: hsl(0, 0%, 85%);
+}
+
+.circle-unchecked {
+    border: 1px solid black;
+    border-radius: 50%;
+    height: 12px;
+    width: 12px;
+}
+
+.circle-checked {
+    border-radius: 50%;
+    height: 12px;
+    width: 12px;
+    background-color: hsl(22, 100%, 55%);
+}
