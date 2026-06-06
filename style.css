@@ -31,6 +31,10 @@ body {
     box-shadow: 1px 1px 10px hsla(0, 0%, 0%, 0.5);
 }
 
+.heading {
+    font-size: 24px;
+}
+
 .add-task {
     background: hsl(0, 0%, 90%);
     display: flex;
@@ -57,7 +61,7 @@ body {
     font-weight: 600;
     border: none;
     border-radius: 24px;
-    background-color: hsl(22, 100%, 55%);
+    background-color: hsl(0, 100%, 63%);
     padding: 8px 12px;
     cursor: pointer;
     height: 48px;
@@ -65,13 +69,25 @@ body {
     transition: ease-in-out 0.2s;
 }
 .add-button:hover {
-    background-color: hsl(22, 100%, 65%);
+    background-color: hsl(0, 100%, 73%);
     color: hsl(0, 0%, 90%);
-}
-.add-button:active {
     transform: scale(1.03);
 }
+.add-button:active {
+    transform: scale(1.05);
+}
 
+.task-lists {
+    display: flex;
+    flex-direction: column;
+}
+
+.error-msg {
+    visibility: hidden;
+    text-align: center;
+    font-size: 14px;
+    color: red;
+}
 
 .task-lists ul {
     list-style: none;
@@ -88,12 +104,28 @@ body {
     cursor: pointer;
     width: 100%;
     position: relative;
-    padding: 0 12px;
+    padding: 0 24px;
     border-radius: 12px;
     height: 32px;
 }
 .task-lists ul li:hover {
     background-color: hsl(0, 0%, 95%);
+}
+.task-lists ul li::before {
+    content: "";
+    position: absolute;
+    left: 4px;
+    width: 16px;
+    height: 16px;
+    background-image: url("/assets/unchecked.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.task-lists ul li.checked::before {
+    background-image: url("/assets/checked.png");
 }
 
 .delete-task {
@@ -110,18 +142,4 @@ body {
 }
 .delete-task:hover {
     background-color: hsl(0, 0%, 85%);
-}
-
-.circle-unchecked {
-    border: 1px solid black;
-    border-radius: 50%;
-    height: 12px;
-    width: 12px;
-}
-
-.circle-checked {
-    border-radius: 50%;
-    height: 12px;
-    width: 12px;
-    background-color: hsl(22, 100%, 55%);
 }
