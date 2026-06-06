@@ -62,7 +62,7 @@ body {
     border: none;
     border-radius: 24px;
     background-color: hsl(0, 100%, 63%);
-    padding: 8px 12px;
+    padding: 8px 20px;
     cursor: pointer;
     height: 48px;
     width: 80px;
@@ -101,16 +101,17 @@ body {
     display: flex;
     align-items: center;
     gap: 8px;
-    cursor: pointer;
     width: 100%;
     position: relative;
     padding: 0 24px;
     border-radius: 12px;
     height: 32px;
+    cursor: pointer;
 }
-.task-lists ul li:hover {
-    background-color: hsl(0, 0%, 95%);
+.task-lists ul li.checked {
+    text-decoration: line-through;
 }
+
 .task-lists ul li::before {
     content: "";
     position: absolute;
@@ -139,6 +140,7 @@ body {
     border: none;
     right: 0;
     position: absolute;
+    cursor: pointer;
 }
 .delete-task:hover {
     background-color: hsl(0, 0%, 85%);
